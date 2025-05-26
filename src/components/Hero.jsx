@@ -37,7 +37,8 @@ const Hero = () => (
 
       .hover-zoom:hover {
         transform: scale(1.05);
-        transition: transform 0.4s ease-in-out;
+        box-shadow: 0 12px 28px rgba(255, 255, 255, 0.2);
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
       }
 
       .icon-hover:hover {
@@ -53,7 +54,7 @@ const Hero = () => (
 
     <div className="container position-relative" style={{ zIndex: 1 }}>
       <div className="row align-items-center">
-        {/* LEFT: Profile Image (Rectangle) */}
+        {/* LEFT: Profile Image */}
         <div className="col-md-5 text-center text-md-start mb-4 mb-md-0">
           <img
             src="/profile.jpg"
@@ -64,8 +65,10 @@ const Hero = () => (
               maxHeight: '400px',
               width: '100%',
               objectFit: 'cover',
-              borderRadius: '0',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+              borderRadius: '1.5rem', // Curved edges
+              border: '4px solid rgba(255, 255, 255, 0.1)', // Optional soft border
+              boxShadow: '0 8px 24px rgba(0,0,0,0.3)', // Enhanced depth
+              transition: 'all 0.4s ease-in-out',
             }}
           />
         </div>
@@ -93,9 +96,8 @@ const Hero = () => (
               rel="noopener noreferrer"
               className="btn btn-outline-light btn-lg shadow-sm hover-zoom"
             >
-             <i className="bi bi-envelope me-2"></i>Contact Me
+              <i className="bi bi-envelope me-2"></i>Contact Me
             </a>
-
           </div>
 
           <div>
@@ -125,4 +127,3 @@ const Hero = () => (
 );
 
 export default Hero;
-
