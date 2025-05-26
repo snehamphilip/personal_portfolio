@@ -37,6 +37,7 @@ const projects = [
 
 const Projects = () => (
   <section
+    id="projects" // Added for linking/navigation
     className="py-5"
     style={{
       background:
@@ -86,6 +87,7 @@ const Projects = () => (
                   right: 20,
                   boxShadow: `0 0 10px ${color}`,
                 }}
+                aria-hidden="true"
               >
                 <i className={icon}></i>
               </div>
@@ -103,6 +105,7 @@ const Projects = () => (
                   rel="noopener noreferrer"
                   className="btn btn-outline-primary align-self-start mt-3"
                   style={{ fontWeight: "600" }}
+                  aria-label={`View ${title} project on GitHub`}
                 >
                   View on GitHub
                 </a>
@@ -111,6 +114,7 @@ const Projects = () => (
                   disabled
                   className="btn btn-outline-secondary align-self-start mt-3"
                   style={{ fontWeight: "600", cursor: "default" }}
+                  aria-disabled="true"
                 >
                   No Repository
                 </button>

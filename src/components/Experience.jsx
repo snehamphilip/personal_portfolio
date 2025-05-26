@@ -25,6 +25,7 @@ const experiences = [
 
 const Experience = () => (
   <section
+    id="experience"  
     className="py-5"
     style={{
       background: "linear-gradient(to right, #f8fafc, #e0f2fe)",

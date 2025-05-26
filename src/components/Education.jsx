@@ -29,9 +29,10 @@ const educations = [
 
 const Education = () => (
   <section
+    id="education"
     className="py-5"
     style={{
-      background: "linear-gradient(to right, #f0f9ff, #e0f2fe)", // Soft, clean, and professional
+      background: "linear-gradient(to right, #cfe8ff, #a9d6ff)", // darker blue gradient background
     }}
   >
     <div className="container">
@@ -49,12 +50,8 @@ const Education = () => (
                 transition: "transform 0.3s ease",
                 cursor: "pointer",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.05)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
               {/* Icon Circle */}
               <div
@@ -66,7 +63,7 @@ const Education = () => (
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "#fff",
+                  color: "#f8f9fa",
                   fontSize: 24,
                   position: "absolute",
                   top: 20,
@@ -94,4 +91,3 @@ const Education = () => (
 );
 
 export default Education;
-

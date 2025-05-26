@@ -41,10 +41,13 @@ const skills = [
 
 const Skills = () => (
   <section
+   id="skills" 
     className="py-5"
     style={{
-      background: "linear-gradient(to right, #fefce8, #fef9c3)",
+      background:
+        "radial-gradient(circle at bottom left, #e0f2fe, #dbeafe, #bfdbfe)",
     }}
+    
   >
     <div className="container">
       <h2 className="text-center mb-5 fw-bold" style={{ color: "#1e3a8a" }}>
@@ -54,20 +57,22 @@ const Skills = () => (
         {skills.map(({ category, items, color, icon }, index) => (
           <div key={index} className="col-md-6 col-lg-4">
             <div
+              role="region"
+              aria-label={`${category} skills`}
+              tabIndex={0}
               className="p-4 rounded shadow-lg h-100 position-relative overflow-hidden"
               style={{
                 backgroundColor: "#ffffff",
                 borderTop: `5px solid ${color}`,
                 paddingRight: "60px", // Space for icon
                 transition: "transform 0.3s ease",
-                cursor: "pointer",
+                cursor: "default",
+                outline: "none",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.05)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
+              onFocus={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onBlur={(e) => (e.currentTarget.style.transform = "scale(1)")}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
               {/* Icon Circle */}
               <div
@@ -86,6 +91,7 @@ const Skills = () => (
                   right: 20,
                   boxShadow: `0 0 10px ${color}`,
                 }}
+                aria-hidden="true"
               >
                 <i className={icon}></i>
               </div>
@@ -94,7 +100,7 @@ const Skills = () => (
                 className="fw-bold mb-3"
                 style={{
                   color: color,
-                  wordWrap: "break-word",
+                  wordBreak: "break-word",
                   maxWidth: "90%",
                 }}
               >
@@ -117,3 +123,4 @@ const Skills = () => (
 );
 
 export default Skills;
+

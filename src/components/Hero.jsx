@@ -4,6 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Hero = () => (
   <section
+    id="hero"  // <-- Add this line here
     className="text-white py-5"
     style={{
       background: 'linear-gradient(135deg, #1e3a8a, #0f766e)', // Indigo to Teal
@@ -65,9 +66,9 @@ const Hero = () => (
               maxHeight: '400px',
               width: '100%',
               objectFit: 'cover',
-              borderRadius: '1.5rem', // Curved edges
-              border: '4px solid rgba(255, 255, 255, 0.1)', // Optional soft border
-              boxShadow: '0 8px 24px rgba(0,0,0,0.3)', // Enhanced depth
+              borderRadius: '1.5rem',
+              border: '4px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
               transition: 'all 0.4s ease-in-out',
             }}
           />

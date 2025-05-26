@@ -7,10 +7,12 @@ import Footer from './components/Footer';
 import CertificatesSection from './components/CertificatesSection';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Header from './components/Header';
 
 function App() {
   return (
     <div >
+      <Header/>
       <Hero/>
       <Education/>
       <Experience/>

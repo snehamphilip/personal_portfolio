@@ -6,16 +6,15 @@ const CertificatesSection = () => {
   const extracurriculars = [
     {
       description: "IEEE membership from 2022 - 2026",
-      
     },
     {
       description: "Mulearn membership from 2024 - 2026",
-      
     },
   ];
 
   return (
     <section
+      id="certificatesection"  
       className="py-5"
       style={{
         background: "linear-gradient(to right, #f0fdfa, #e0f7f1)",
@@ -52,4 +51,5 @@ const CertificatesSection = () => {
 };
 
 export default CertificatesSection;
+
 
